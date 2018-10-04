@@ -1,0 +1,1 @@
+data class ThingK(val name: String, val desc: String)
