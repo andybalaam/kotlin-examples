@@ -21,12 +21,14 @@ class EmitterK {
             return
         }
 
-        // start += 3; compile error
+        for(start in 0..3) { // Warning: name shadowed
+            // ...
+        }
 
         // ... url is now known to be non-null
 
         end = System.currentTimeMillis()
-        println(m.id + " took " + (end - start))
+        println(m.id + ": " + (end - start))
 
         // ...
 

@@ -7,14 +7,14 @@ private val wordValues = mapOf(
 )
 
 class ScorerK {
-    private val scores = HashMap<String, Int>()
+    val scores = mutableMapOf<String, Int>()
 
     fun scoreRequest(user: String, path: String) {
         scores.merge(
             user,
             wordValues[path] ?: 0,
             Integer::sum
-        );
+        )
     }
 
     fun total(user: String): Int {

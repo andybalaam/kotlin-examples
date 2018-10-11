@@ -25,12 +25,14 @@ public class Emitter {
             return;
         }
 
-        start += 3;
+        for(start = 0; start < 3; start++) {
+            // ...
+        }
 
         // ...
 
         end = System.currentTimeMillis();
-        System.out.println(m.id + " took " + (end-start));
+        System.out.println(m.id + ": " + (end-start));
 
         // ...
 
