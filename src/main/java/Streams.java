@@ -18,8 +18,8 @@ public class Streams {
         }
     }
 
-    static final List<String> britishDrinks =
-        Arrays.asList("tea", "squash");
+    static final List<String> hotDrinks =
+        Arrays.asList("tea", "coffee");
 
     final List<Customer> customers;
 
@@ -27,10 +27,10 @@ public class Streams {
         this.customers = Arrays.asList(customers);
     }
 
-    public List<String> britishCustomers() {
+    public List<String> hotCustomers() {
         return customers.stream()
             .filter(
-                cust ->britishDrinks.stream().anyMatch(
+                cust -> hotDrinks.stream().anyMatch(
                     drink -> cust.drink.contains(drink)
                 )
             )
